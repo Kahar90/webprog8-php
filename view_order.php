@@ -9,6 +9,9 @@ $user = $_SESSION["USER"];
 $sql="SELECT `user`, `itemname`, `itemqtty` FROM `usercart` WHERE user='$user' ";
 $result = mysqli_query($conn, $sql);
 
+
+
+
 if (mysqli_num_rows($result) > 0){ ?>
 
     <table width="600" border="1" cellspacing="0" cellpadding="3">
@@ -30,6 +33,8 @@ if (mysqli_num_rows($result) > 0){ ?>
                 <?php  }?>
                 
     <?php
+    }else {
+        echo "<h1> No orders yet! go order something :D </h1>";
     }
 
 
