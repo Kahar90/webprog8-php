@@ -17,6 +17,22 @@ $itemDescription = $_POST["itemDesc"];
 <html>
     <head>
         <body>
+            
+        <div class="navbar">
+			<div class="navbarname">
+				<a><span style="color:#1D8348">KAK SU</span><span style="color:#2E86C1">NASI KERABU</span></a>  
+			</div>
+
+			<div class="navbarbutton">
+				<ul>
+					<li><a href="#home">Menu</a></li>
+					<li><a href="#news">About us</a></li>
+					<li><a href="#contact">Contact Us</a></li>
+					<li style="column-width:60px"><a href="#cart"><span class="material-symbols-outlined">shopping_cart</span></a></li>
+				</ul>
+			</div>
+		</div>
+
             <h1>
                 Edit Item <?php echo $itemName?>
             </h1>

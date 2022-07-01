@@ -19,7 +19,7 @@ html{
   
 .navbarbutton li {
     float: left;
-    column-width:250px;
+    column-width:150px;
 }
   
 .navbarbutton li a {
@@ -47,10 +47,11 @@ html{
 
 }
 
-.navbarname{
+.navbarname a span{
     padding: 10px 0;
-    font-size:150%;
+    font-size:250%;
     font-weight: 900;
+    margin-left: 10px;
 }
 
 .material-symbols-outlined {
@@ -114,4 +115,27 @@ span.psw {
   .cancelbtn {
      width: 100%;
   }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: -9px;
+  }
+
+.loginform{
+    padding: 10px 0;
+}
+
+.loginform h1{
+    text-align: center;
+    margin-right:70px;
+}
+
+.loginform form{
+    margin-right:70px;
+}
+
+body{
+    overflow: hidden;
 }
