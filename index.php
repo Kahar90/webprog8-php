@@ -1,11 +1,11 @@
 	<html>
 	<head>
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<title>Login</title>
 	</head>
 
-	<body>
+	<body style="overflow: hidden;">
 
 		<div class="grid-container">
 			<div>
