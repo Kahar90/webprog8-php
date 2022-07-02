@@ -11,7 +11,11 @@ $result = mysqli_query($conn, $sql);
 
 
 
-
+?>
+<head>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<?php
 if (mysqli_num_rows($result) > 0){ ?>
 
     <table width="600" border="1" cellspacing="0" cellpadding="3">
@@ -39,14 +43,3 @@ if (mysqli_num_rows($result) > 0){ ?>
 
 
 ?>
-
-<html>
-    <head>
-        <body>
-            <h1>Your Order</h1>
-            <a href="main.php"><h1>Back</h1></a>
-            <br>
-
-        </body>
-    </head>
-</html>
