@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/about-us.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -21,8 +20,7 @@
             <ul>
                 <li><a href="main.php">Menu</a></li>
                 <li><a href="#news">About us</a></li>
-                <li><a href="contact-us.php">Contact Us</a></li>
-                <li style="column-width:60px"><a href="view_order.php"><span class="material-symbols-outlined">shopping_cart</span></a></li>
+                <li><a href="contact-us-admin.php">Contact Us</a></li>
             </ul>
         </div>
     </div>
@@ -44,7 +42,7 @@
             </div>
             <div class="history-info">
                 <h2>Serving more than ten cities in Malaysia</h2>
-                <p></p>
+                <p>Established in 1986, Kak Su Nasi Kerabu has more than 30,000 branches spread throughout Malaysia.</p>
             </div>
         </div>
     </div>
