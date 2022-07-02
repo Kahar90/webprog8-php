@@ -91,11 +91,10 @@ if ($user_level == 1) {
                         <li><img src="<?php echo $rows['linkimg'] ?>" alt="" width="300"></li>
                         <li class="grey">RM <?php echo $rows['itemprice']; ?></li>
                         <li><?php echo $rows['itemdesc']; ?></li>
-                        <li class="grey"><input type="number" id="quantity" name="quantity" min="1" max="5"> <a href="#" class="button" value="Order">Order Now</a></li>
+                        <li class="grey"><input type="number" id="quantity" name="quantity" min="1" max="5"> <input type="submit" value="Order"></a></li>
                     
                     </ul>   
-                </div> 
-            
+                </div>
             <?php }?>
         </div>  
        <?php } ?>
