@@ -29,6 +29,7 @@ html{
     padding: 14px 16px;
     text-decoration: none;
     border-radius: 30px;
+    font-size: 18px;
 }
 
 .navbarbutton li a:hover:not(.active) {
@@ -143,17 +144,17 @@ span.psw {
   box-sizing: border-box;
 }
 
-.grid-container{
+.grid-container2{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   row-gap:20px;
   column-gap:30px;
-
 }
 
 .columns {
   float: left;
   padding: 8px;
+  
 }
 
 .price {
@@ -161,9 +162,10 @@ span.psw {
   border: 1px solid #eee;
   margin: 0;
   padding: 0;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
+  
 }
+
 
 .price:hover {
   box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
@@ -172,7 +174,7 @@ span.psw {
 .price .header {
   background-color: #2E86C1;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .price li {
@@ -194,6 +196,11 @@ span.psw {
   text-align: center;
   text-decoration: none;
   font-size: 18px;
+}
+
+.button-container{
+  text-align: center;
+  margin-top: 50px;
 }
 
 @media only screen and (max-width: 600px) {

@@ -30,7 +30,7 @@ $_SESSION["ID"] = $user_id;
 $_SESSION["LEVEL"] =$user_level;
 
 echo "<h2>You are now logged in as ".$_SESSION["USER"]." with access level ".$_SESSION["LEVEL"]."</h2>";
-echo "<a href='customermenu.php'>Enter site</a><br/><br/>"; 
+echo "<a href='main.php'>Enter site</a><br/><br/>"; 
 echo "<a href='index.php'>Back to login page</a>"; 
 
 //if wrong username and password

@@ -30,6 +30,9 @@ $user_level =$_SESSION["LEVEL"];
                 <br>
                 <label for="itemDescription">Item Description:</label>
                 <input type="text" name="itemDescription">
+                <br>
+                <label for="itemDescription">Link Image:</label>
+                <input type="text" name="linkimg">
                 <br>                            
                 <br>
                 <input type="submit" value="Add">
@@ -38,9 +41,3 @@ $user_level =$_SESSION["LEVEL"];
         </body>
     </head>
 </html>
-
-
-
-
-
-

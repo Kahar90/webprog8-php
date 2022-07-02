@@ -8,8 +8,9 @@ $user_level =$_SESSION["LEVEL"];
 $itemName= $_POST["itemName"];
 $itemPrice = $_POST["itemPrice"];
 $itemDescription = $_POST["itemDescription"];
+$linkimg = $_POST["linkimg"];
 
-$sql = "INSERT INTO `item`(`itemname`, `itemdesc`, `itemprice`) VALUES ('$itemName','$itemDescription','$itemPrice')";
+$sql = "INSERT INTO `item`(`itemname`, `itemdesc`, `itemprice`, `linkimg`) VALUES ('$itemName','$itemDescription','$itemPrice', '$linkimg')";
 
 echo $sql;
 

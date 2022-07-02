@@ -34,18 +34,18 @@
     <div class="grid-container">
         <?php while($rows = mysqli_fetch_assoc($result)) { ?>
             <div class="columns">
-            <ul class="price">
-                <li class="header"><?php echo $rows['itemname'] ?></li>
-                <li><img src="img/nasikerabu.jpeg" alt="" width="300"></li>
-                <li class="grey">RM <?php echo $rows['itemprice']; ?></li>
-                <li><?php echo $rows['itemdesc']; ?></li>
-                <li class="grey"><input type="number" id="quantity" name="quantity" min="1" max="5"> <a href="#" class="button">Order Now</a></li>
-            </ul>
+                <ul class="price">
+                    <li class="header"><?php echo $rows['itemname'] ?></li>
+                    <li><img src="<?php echo $rows['linkimg'] ?>" alt="" width="300"></li>
+                    <li class="grey">RM <?php echo $rows['itemprice']; ?></li>
+                    <li><?php echo $rows['itemdesc']; ?></li>
+                    <li class="grey"><input type="number" id="quantity" name="quantity" min="1" max="5"> <a href="#" class="button">Order Now</a></li>
+                   
+                </ul>   
             </div> 
         
-        <?php }?>   
+        <?php }?>
     </div>
-    
 
     
 

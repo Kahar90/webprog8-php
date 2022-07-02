@@ -9,8 +9,9 @@ $itemNameOld = $_POST["itemNameOld"];
 $itemNameNew = $_POST["itemNameNew"];
 $itemPrice = $_POST["itemPrice"];
 $itemDescription = $_POST["itemDescription"];
+$linkimg = $_POST["linkimg"];
 
-$sql = "UPDATE `item` SET `itemname`='$itemNameNew',`itemdesc`='$itemDescription',`itemprice`='$itemPrice' WHERE `itemname`='$itemNameOld'";
+$sql = "UPDATE `item` SET `itemname`='$itemNameNew',`itemdesc`='$itemDescription',`itemprice`='$itemPrice',`linkimg`='$linkimg' WHERE `itemname`='$itemNameOld'";
 
 echo $sql;
 

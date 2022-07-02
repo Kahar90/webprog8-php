@@ -47,7 +47,9 @@ $itemDescription = $_POST["itemDesc"];
                 <br>
                 <label for="itemDescription">Item Description:</label>
                 <input type="text" name="itemDescription" value="<?php echo $itemDescription?>">
-                <br>                            
+                <br> 
+                <label for="linkimg">Link Image:</label>
+                <input type="text" name="linkimg">                           
                 <br>
                 <input type="submit" value="Update">
             </form>
@@ -55,9 +57,3 @@ $itemDescription = $_POST["itemDesc"];
         </body>
     </head>
 </html>
-
-
-
-
-
-
