@@ -26,17 +26,17 @@
     </div>
 
     <div class="grid-container2">
-    <form name="additemtocart" method="POST" action="insert_item.php">
-    <div class="columns">
-        <ul class="price">
-            <li class="header">NASI KANDAR</li>
-            <li><img src="img/nasikerabu.jpeg" alt="" width="300" height="200"></li>
-            <li class="grey">RM SEKIAN</li>
-            <li>NASI PUNYA PAK KANDAR</li>
-            <li class="grey"><input type="submit" value="Edit"><input type="submit" value="Delete"></a></li>
-        </ul>   
-    </div>
-</form>
+        <form name="routeedititempage" method="POST" action="edititempage.php">
+            <div class="columns">
+                <ul class="price">
+                    <li class="header">NASI KANDAR</li>
+                    <li><img src="img/nasikerabu.jpeg" alt="" width="300" height="200"></li>
+                    <li class="grey">RM SEKIAN</li>
+                    <li>NASI PUNYA PAK KANDAR</li>
+                    <li class="grey"><input type="submit" value="Edit"><input type="submit" value="Delete"></a></li>
+                </ul>   
+            </div>
+        </form>
 
     </div>  
 

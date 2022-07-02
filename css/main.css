@@ -134,6 +134,25 @@ span.psw {
   border-radius: 25px;
 }
 
+.addnew button{
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  width: 250px;
+  text-decoration: none;
+  margin: 30px 2px 30px 10px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
 .button {
   background-color: #04AA6D;
   border: none;
