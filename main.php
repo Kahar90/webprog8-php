@@ -23,43 +23,48 @@ if ($user_level == 1) {
     // level 1 means it is admin
    
     if (mysqli_num_rows($result) > 0){ ?>
+        <div class="navbar">
+            <div class="navbarname">
+                <a href="index.php"><span style="color:#1D8348">KAK SU</span><span style="color:#2E86C1">NASI KERABU</span></a>  
+            </div>
 
-        <table width="600" border="1" cellspacing="0" cellpadding="3">
-        <tr>
-                <td align="center"><strong>Item Name</strong></td>
-                <td align="center"><strong>Item Description</strong></td>
-                <td align="center"><strong>Item Price</strong></td>
-                <td align="center"><strong>Action</strong></td>
-                 
-         <?php while($rows = mysqli_fetch_assoc($result)) { ?>
-                <tr>
-                    <form name="routeedititempage" method="POST" action="edititempage.php">
-                    <td><input type="hidden" value="<?php echo $rows['itemname']; ?>" name="itemName"><?php echo $rows['itemname']; ?></td>
-                    <td><input type="hidden" value="<?php echo $rows['itemdesc']; ?>" name="itemDesc"><?php echo $rows['itemdesc']; ?></td>
-                    <td><input type="hidden" value="<?php echo $rows['itemprice']; ?>" name="itemPrice"><?php echo $rows['itemprice']; ?></td>
-                    
-                    <td><input type="submit" value="Edit"> <br> 
-                    </form>
-                    <form action="deleteitem.php" method="POST">
-                    <input type="hidden" value="<?php echo $rows['itemname']; ?>" name="itemName">
-                    <input type="hidden" value="<?php echo $rows['itemdesc']; ?>" name="itemDesc">
-                    <input type="hidden" value="<?php echo $rows['itemprice']; ?>" name="itemPrice">
-                    <input type="submit" value="Delete"></td>
-                    </form>
-                    
-                   
-                    
-                    <?php  }?>
-                    
-        <?php
-        }
-        ?>
+            <div class="navbarbutton">
+                <ul>
+                    <li><a href="#home">Menu</a></li>
+                    <li><a href="#news">About us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        
+            <div class="addnew">
+                <form action="addnewitempage.php">
+                    <button type="submit">+ Add item</button>
+                </form>
+            </div>
+            
+            <div class="grid-container2">
+            <?php while($rows = mysqli_fetch_assoc($result)) { ?>
+                <form name="routeedititempage" method="POST" action="edititempage.php">
+                    <div class="columns">
+                        <ul class="price">
+                            <li class="header"><input type="hidden" value="<?php echo $rows['itemname']; ?>" name="itemName"><?php echo $rows['itemname']; ?></li>
+                            <li><input type="hidden" value="<?php echo $rows['linkimg']; ?>" name="linkImg"><img src="<?php echo $rows['linkimg']; ?>" alt="" width="300" height="200"></li>
+                            <li class="grey"><input type="hidden" value="<?php echo $rows['itemprice']; ?>" name="itemPrice">RM <?php echo $rows['itemprice']; ?></li>
+                            <li><input type="hidden" value="<?php echo $rows['itemdesc']; ?>" name="itemDesc"><?php echo $rows['itemdesc']; ?></li>
+                            <li class="grey"><input type="submit" value="Edit"><input type="submit" value="Delete" formaction="deleteitem.php"></li>
+                        </ul>   
+                    </div>
+
+                </form>
+                        <?php  }?>
+            </div> 
+
+    
+
+        <?php } ?>
 
         
-        <h1>Admin Menu</h1>
-        <a href="index.php">
-        <h1>Logout</h1>
-        <button><a href="addnewitempage.php">Add item</a></button>
         
         
 
