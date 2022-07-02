@@ -32,7 +32,7 @@ if ($user_level == 1) {
                 <ul>
                     <li><a href="main.php">Menu</a></li>
                     <li><a href="#news">About us</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="contact-us-admin.php">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -84,7 +84,7 @@ if ($user_level == 1) {
             <ul>
                 <li><a href="main.php">Menu</a></li>
                 <li><a href="#news">About us</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="contact-us.php">Contact Us</a></li>
                 <li style="column-width:60px"><a href="view_order.php"><span class="material-symbols-outlined">shopping_cart</span></a></li>
             </ul>
         </div>

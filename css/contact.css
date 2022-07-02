@@ -1,0 +1,13 @@
+.contact{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+
+.maps iframe{
+    padding: 100px;
+}
+
+.info{
+    padding: 70px;
+}
