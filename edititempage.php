@@ -8,8 +8,7 @@ $user_level =$_SESSION["LEVEL"];
 $itemName = $_POST["itemName"];
 $itemPrice = $_POST["itemPrice"];
 $itemDescription = $_POST["itemDesc"];
-
-
+$linkimg = $_POST["linkImg"];
 
 ?>
 
@@ -44,34 +43,37 @@ $itemDescription = $_POST["itemDesc"];
 
             </thead>
             <tbody>
+            <form method="POST" name="updateitem" action="updateitem.php">
+            <input type="hidden" value="<?php echo $itemName?>" name="itemNameOld">
                 <tr>
                     <td><b>Item Name</b></td>
                     <td>:</td>
-                    <td><input type="text" placeholder="Item Name"></td>
+                    <td><input type="text" name="itemNameNew" value="<?php echo $itemName?>"></td>
                 </tr>
                 <tr>
                     <td><b>Item Price</b></td>
                     <td>:</td>
-                    <td><input type="number" placeholder="Price"></td>
+                    <td><input type="number" name="itemPrice" value="<?php echo $itemPrice?>"></td>
                 </tr>
                 <tr>
                     <td><b>Item Description</b></td>
                     <td>:</td>
-                    <td><textarea name="" id="" cols="20" rows="3" placeholder="Description"></textarea></td>
+                    <td><textarea cols="20" rows="3" name="itemDescription" value="<?php echo $itemDescription?>"></textarea></td>
                 </tr>
                 <tr>
                     <td><b>Image Link</b></td>
                     <td>:</td>
-                    <td><input type="text" placeholder="Image Link"></td>
+                    <td><input type="text" name="linkimg" value="<?php echo $linkimg?>"></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>
                         <button class="go-back"><a href="main.php">Go Back</a></button>
-                        <button class="submit" onclick="alert(confirm('Confirm to Update?'))">Update</button>
+                        <button class="submit" onclick="alert('Confirm to Submit?')">Submit</button>
                     </td>
                 </tr>
+                </form>
             </tbody>
         </table>
     </center>

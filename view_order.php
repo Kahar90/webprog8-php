@@ -6,7 +6,7 @@ require('config.php');//read up on php includes https://www.w3schools.com/php/ph
 // username and password sent from form
 $user = $_SESSION["USER"];
 
-$sql = "SELECT item.itemname, item.linkimg,usercart.user,usercart.itemqtty\n"
+$sql = "SELECT item.itemname, item.linkimg,usercart.user,usercart.itemqtty,item.itemprice\n"
 
     . "  FROM usercart JOIN item ON item.itemname = usercart.itemname\n"
 
@@ -65,7 +65,12 @@ if (mysqli_num_rows($result) > 0){ ?>
                     <?php echo $rows['itemqtty']; ?>
                   </div>
               
-                  <div class="total-price">$549</div>
+                  <div class="total-price">
+                    <input type="hidden" name="itemPrice" value="<?php echo $rows['itemprice']; ?>"> 
+                    RM 
+                    <?php echo $rows['itemprice']; ?>
+                
+                  </div>
 
                   <div class="delete-button">
                     <button type="submit" class="material-symbols-outlined">delete</button>
@@ -78,8 +83,28 @@ if (mysqli_num_rows($result) > 0){ ?>
     </div>
                 
     <?php
-    }else {
-        echo "<h1> No orders yet! go order something :D </h1>";
+    }else { ?>
+        <div class="navbar">
+        <div class="navbarname">
+            <a href="index.php"><span style="color:#1D8348">KAK SU</span><span style="color:#2E86C1">NASI KERABU</span></a>  
+        </div>
+
+        <div class="navbarbutton">
+            <ul>
+                <li><a href="main.php">Menu</a></li>
+                <li><a href="#news">About us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li style="column-width:60px"><a href="view_order.php"><span class="material-symbols-outlined">shopping_cart</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="shopping-cart">
+                <!-- Title -->
+                <div class="title">
+                  CART
+                </div>
+<?php
     }
 
 

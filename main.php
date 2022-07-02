@@ -21,9 +21,9 @@ $result = mysqli_query($conn, $sql);
 <?php
 if ($user_level == 1) {
     // level 1 means it is admin
-   
-    if (mysqli_num_rows($result) > 0){ ?>
-        <div class="navbar">
+    ?>
+    
+    <div class="navbar">
             <div class="navbarname">
                 <a href="index.php"><span style="color:#1D8348">KAK SU</span><span style="color:#2E86C1">NASI KERABU</span></a>  
             </div>
@@ -42,7 +42,9 @@ if ($user_level == 1) {
                     <button type="submit">+ Add item</button>
                 </form>
             </div>
-            
+            <?php
+    if (mysqli_num_rows($result) > 0){ ?>
+        
             <div class="grid-container2">
             <?php while($rows = mysqli_fetch_assoc($result)) { ?>
                 <form name="routeedititempage" method="POST" action="edititempage.php">
@@ -52,7 +54,7 @@ if ($user_level == 1) {
                             <li><input type="hidden" value="<?php echo $rows['linkimg']; ?>" name="linkImg"><img src="<?php echo $rows['linkimg']; ?>" alt="" width="300" height="200"></li>
                             <li class="grey"><input type="hidden" value="<?php echo $rows['itemprice']; ?>" name="itemPrice">RM <?php echo $rows['itemprice']; ?></li>
                             <li><input type="hidden" value="<?php echo $rows['itemdesc']; ?>" name="itemDesc"><?php echo $rows['itemdesc']; ?></li>
-                            <li class="grey"><input type="submit" value="Edit"><input type="submit" value="Delete" formaction="deleteitem.php"></li>
+                            <li class="grey"><input type="submit" value="Edit"><input type="submit" onclick="alert('Item deleted Successfully')" value="Delete" formaction="deleteitem.php" ></li>
                         </ul>   
                     </div>
 
@@ -100,7 +102,7 @@ if ($user_level == 1) {
                         <li><img src="<?php echo $rows['linkimg'] ?>" alt="" width="300" height="200"></li>
                         <li class="grey">RM <?php echo $rows['itemprice']; ?></li>
                         <li><?php echo $rows['itemdesc']; ?></li>
-                        <li class="grey"><input type="number" id="quantity" name="quantity" min="1" max="5"> <input type="submit" value="Order"></a></li>
+                        <li class="grey"><input type="number" id="quantity" name="quantity" min="1" max="5"> <input type="submit" value="Order" onclick="alert('Added to cart successfully')"></a></li>
                     
                     </ul>   
                 </div>

@@ -11,16 +11,13 @@ $itemDescription = $_POST["itemDesc"];
 
 $sql = "DELETE FROM `item` WHERE `itemname` = '$itemName'";
 
-echo $sql;
-
 if (mysqli_query($conn, $sql)) {
-    echo "<h3>Deleted Item Succesfully</h3>";
+    header("Location: main.php");
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
 
 
  mysqli_close($conn);
- echo "<p><a href='main.php'>Click here to go back</a></p>";
 
 ?>

@@ -8,15 +8,14 @@ $user_level =$_SESSION["LEVEL"];
 $itemNameOld = $_POST["itemNameOld"];
 $itemNameNew = $_POST["itemNameNew"];
 $itemPrice = $_POST["itemPrice"];
-$itemDescription = $_POST["itemDescription"];
-$linkimg = $_POST["linkimg"];
+$itemDescription = $_POST["itemDesc"];
+$linkimg = $_POST["linkImg"];
 
 $sql = "UPDATE `item` SET `itemname`='$itemNameNew',`itemdesc`='$itemDescription',`itemprice`='$itemPrice',`linkimg`='$linkimg' WHERE `itemname`='$itemNameOld'";
 
-echo $sql;
 
 if (mysqli_query($conn, $sql)) {
-    echo "<h3>New record created successfully</h3>";
+    header("Location: main.php");
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }

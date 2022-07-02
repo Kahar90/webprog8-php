@@ -12,16 +12,16 @@ $linkimg = $_POST["linkimg"];
 
 $sql = "INSERT INTO `item`(`itemname`, `itemdesc`, `itemprice`, `linkimg`) VALUES ('$itemName','$itemDescription','$itemPrice', '$linkimg')";
 
-echo $sql;
-
 if (mysqli_query($conn, $sql)) {
-    echo "<h3>New Item Added successfully</h3>";
-    } else {
+    header("Location: main.php");
+} else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
 
 
  mysqli_close($conn);
- echo "<p><a href='main.php'>Click here to go back</a></p>";
+ 
 
 ?>
+
+<input type="hidden">
