@@ -16,6 +16,9 @@ $itemDescription = $_POST["itemDesc"];
 
 <html>
     <head>
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/addnewitem.css">
+    </head>
         <body>
             
         <div class="navbar">
@@ -28,32 +31,50 @@ $itemDescription = $_POST["itemDesc"];
 					<li><a href="main.php">Menu</a></li>
 					<li><a href="#news">About us</a></li>
 					<li><a href="#contact">Contact Us</a></li>
-					<li style="column-width:60px"><a href="#cart"><span class="material-symbols-outlined">shopping_cart</span></a></li>
 				</ul>
 			</div>
 		</div>
 
-            <h1>
-                Edit Item <?php echo $itemName?>
-            </h1>
-            
-            <form method="POST" name="updateitem" action="updateitem.php">
-                <input type="hidden" value="<?php echo $itemName?>" name="itemNameOld">
-                <label for="itemName">Item Name:</label>
-                <input type="text" name="itemNameNew" value="<?php echo $itemName?>">
-                <br>
-                <label for="itemPrice">Item Price:</label>
-                <input type="text" name="itemPrice" value="<?php echo $itemPrice?>">
-                <br>
-                <label for="itemDescription">Item Description:</label>
-                <input type="text" name="itemDescription" value="<?php echo $itemDescription?>">
-                <br> 
-                <label for="linkimg">Link Image:</label>
-                <input type="text" name="linkimg">                           
-                <br>
-                <input type="submit" value="Update">
-            </form>
-            <h1><a href="main.php">Back</a></h1>
-        </body>
-    </head>
+        <center>
+        <h1>
+            Edit Item <?php echo $itemName?>
+        </h1>
+        <table>
+            <thead>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Item Name</b></td>
+                    <td>:</td>
+                    <td><input type="text" placeholder="Item Name"></td>
+                </tr>
+                <tr>
+                    <td><b>Item Price</b></td>
+                    <td>:</td>
+                    <td><input type="number" placeholder="Price"></td>
+                </tr>
+                <tr>
+                    <td><b>Item Description</b></td>
+                    <td>:</td>
+                    <td><textarea name="" id="" cols="20" rows="3" placeholder="Description"></textarea></td>
+                </tr>
+                <tr>
+                    <td><b>Image Link</b></td>
+                    <td>:</td>
+                    <td><input type="text" placeholder="Image Link"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="go-back"><a href="main.php">Go Back</a></button>
+                        <button class="submit" onclick="alert(confirm('Confirm to Update?'))">Update</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+    </body>
+
 </html>
