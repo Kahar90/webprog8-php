@@ -13,31 +13,62 @@ $user_level =$_SESSION["LEVEL"];
 
 ?>
 
+<head>
+    <link rel="stylesheet" href="css/addnewitem.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
 
-<html>
-    <head>
-        <body>
-            <h1>
-                Add New Item
-            </h1>
-            
-            <form method="POST" name="updateitem" action="additem.php">
-                <label for="itemName">Item Name:</label>
-                <input type="text" name="itemName">
-                <br>
-                <label for="itemPrice">Item Price:</label>
-                <input type="text" name="itemPrice">
-                <br>
-                <label for="itemDescription">Item Description:</label>
-                <input type="text" name="itemDescription">
-                <br>
-                <label for="itemDescription">Link Image:</label>
-                <input type="text" name="linkimg">
-                <br>                            
-                <br>
-                <input type="submit" value="Add">
-            </form>
-            <h1><a href="main.php">Back</a></h1>
-        </body>
-    </head>
-</html>
+<body>
+    <div class="navbar">
+        <div class="navbarname">
+            <a href="index.php"><span style="color:#1D8348">KAK SU</span><span style="color:#2E86C1">NASI KERABU</span></a>  
+        </div>
+
+        <div class="navbarbutton">
+            <ul>
+                <li><a href="#home">Menu</a></li>
+                <li><a href="#news">About us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Add New Item</h2>
+    <center>
+        <table>
+            <thead>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Item Name</b></td>
+                    <td>:</td>
+                    <td><input type="text" placeholder="Item Name"></td>
+                </tr>
+                <tr>
+                    <td><b>Item Price</b></td>
+                    <td>:</td>
+                    <td><input type="number" placeholder="Price"></td>
+                </tr>
+                <tr>
+                    <td><b>Item Description</b></td>
+                    <td>:</td>
+                    <td><textarea name="" id="" cols="20" rows="3" placeholder="Description"></textarea></td>
+                </tr>
+                <tr>
+                    <td><b>Image Link</b></td>
+                    <td>:</td>
+                    <td><input type="text" placeholder="Image Link"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="go-back"><a href="main.php">Go Back</a></button>
+                        <button class="submit" onclick="alert(confirm('Confirm to Submit?'))">Submit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+</body>
