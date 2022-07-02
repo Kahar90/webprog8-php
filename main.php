@@ -54,6 +54,8 @@ if ($user_level == 1) {
         <?php
         }
         ?>
+
+        
         <h1>Admin Menu</h1>
         <a href="index.php">
         <h1>Logout</h1>
