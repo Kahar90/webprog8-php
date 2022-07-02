@@ -18,7 +18,7 @@
 
         <div class="navbarbutton">
             <ul>
-                <li><a href="#home">Menu</a></li>
+                <li><a href="main.php">Menu</a></li>
                 <li><a href="#news">About us</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>

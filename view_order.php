@@ -6,7 +6,11 @@ require('config.php');//read up on php includes https://www.w3schools.com/php/ph
 // username and password sent from form
 $user = $_SESSION["USER"];
 
-$sql="SELECT `user`, `itemname`, `itemqtty` FROM `usercart` WHERE user='$user' ";
+$sql = "SELECT item.itemname, item.linkimg,usercart.user,usercart.itemqtty\n"
+
+    . "  FROM usercart JOIN item ON item.itemname = usercart.itemname\n"
+
+    . "  WHERE usercart.user=\"customer\";";
 $result = mysqli_query($conn, $sql);
 
 
@@ -21,23 +25,57 @@ $result = mysqli_query($conn, $sql);
 <?php
 if (mysqli_num_rows($result) > 0){ ?>
 
-    <table width="600" border="1" cellspacing="0" cellpadding="3">
-    <tr>
-            <td align="center"><strong>Item Name</strong></td>
-            <td align="center"><strong>Order quantity</strong></td>
-            <td align="center"><strong>Action</strong></td>
-             
+    <div class="navbar">
+        <div class="navbarname">
+            <a href="index.php"><span style="color:#1D8348">KAK SU</span><span style="color:#2E86C1">NASI KERABU</span></a>  
+        </div>
+
+        <div class="navbarbutton">
+            <ul>
+                <li><a href="main.php">Menu</a></li>
+                <li><a href="#news">About us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li style="column-width:60px"><a href="view_order.php"><span class="material-symbols-outlined">shopping_cart</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="shopping-cart">
+                <!-- Title -->
+                <div class="title">
+                  CART
+                </div>   
      <?php while($rows = mysqli_fetch_assoc($result)) { ?>
-            <tr>
-
             <form method="POST" name="deleteorder" action="deleteorder.php">
-            <td><input type="hidden" name="itemName" value="<?php echo $rows['itemname']; ?>"><?php echo $rows['itemname']; ?></td>
-            <td><input type="hidden" name="quantity" value="<?php echo $rows['itemqtty']; ?>"><?php echo $rows['itemqtty']; ?></td>
-            <td><input type="submit" value="Delete order"></td>
-            </form>
+              
+                <!-- Product #1 -->
+                <div class="item">
+              
+                  <div class="image">
+                    <img src="<?php echo $rows['linkimg']; ?>" width="80" length="150"/>
+                  </div>
+              
+                  <div class="description">
+                    <input type="hidden" name="itemName" value="<?php echo $rows['itemname']; ?>">
+                    <?php echo $rows['itemname']; ?>
+                  </div>
+              
+                  <div class="quantity">
+                    <input type="hidden" name="quantity" value="<?php echo $rows['itemqtty']; ?>">
+                    <?php echo $rows['itemqtty']; ?>
+                  </div>
+              
+                  <div class="total-price">$549</div>
 
-                
-                <?php  }?>
+                  <div class="delete-button">
+                    <button type="submit" class="material-symbols-outlined">delete</button>
+                  </div>
+                </div>
+            
+             
+            </form>
+            <?php  }?>               
+    </div>
                 
     <?php
     }else {
@@ -47,50 +85,5 @@ if (mysqli_num_rows($result) > 0){ ?>
 
 ?>
 
-<div class="navbar">
-        <div class="navbarname">
-            <a href="index.php"><span style="color:#1D8348">KAK SU</span><span style="color:#2E86C1">NASI KERABU</span></a>  
-        </div>
 
-        <div class="navbarbutton">
-            <ul>
-                <li><a href="#home">Menu</a></li>
-                <li><a href="#news">About us</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <li style="column-width:60px"><a href="view_order.php"><span class="material-symbols-outlined">shopping_cart</span></a></li>
-            </ul>
-        </div>
-</div>
 
-<div class="shopping-cart">
-  <!-- Title -->
-  <div class="title">
-    CART
-  </div>
- 
-  <!-- Product #1 -->
-  <div class="item">
- 
-    <div class="image">
-      <img src="img/nasikerabu.jpeg" width="80" length="150"/>
-    </div>
- 
-    <div class="description">
-      <span>NASI GURIH</span>
-      <span>White</span>
-    </div>
- 
-    <div class="quantity">
-      <span>Quantity</span>
-      <span>2</span>
-    </div>
- 
-    <div class="total-price">$549</div>
-
-    <div class="delete-button"><a><span class="material-symbols-outlined">
-    delete
-    </span></a>
-    </div>
-  </div>
- 
-</div>
