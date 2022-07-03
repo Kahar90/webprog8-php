@@ -44,7 +44,7 @@
             </div>
             <div class="history-info">
                 <h2>Serving more than ten cities in Malaysia</h2>
-                <p></p>
+                <p>Established in 1986, Kak Su Nasi Kerabu has more than 30,000 branches spread throughout Malaysia.</p>
             </div>
         </div>
     </div>
