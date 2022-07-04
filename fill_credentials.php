@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
+session_start(); // Start up your PHP Session
+ 
+require('config.php');//read up on php includes https://www.w3schools.com/php/php_includes.asp
+
+// username and password sent from form
+$username =$_SESSION["USER"];
+
+
+$sql = "SELECT * FROM `usercart` WHERE user = '$username';";
+$result = mysqli_query($conn, $sql);
+
+?>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Credentials</title>
     <link rel="stylesheet" href="css/addnewitem.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -32,11 +41,11 @@
 
             </thead>
             <tbody>
-            <form method="POST" name="updateitem" action="additem.php">
+            <form method="POST" action="order_item.php">
                 <tr>
                     <td><b>Name</b></td>
                     <td>:</td>
-                    <td><input type="text" name="Name"></td>
+                    <td><input type="text" name="name"></td>
                 </tr>    
                 <tr>
                     <td><b>Address</b></td>
@@ -62,3 +71,5 @@
     </center>
 </body>
 </html>
+
+

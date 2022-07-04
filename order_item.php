@@ -7,8 +7,9 @@ require('config.php');//read up on php includes https://www.w3schools.com/php/ph
 $username =$_SESSION["USER"];
 $address =$_POST["address"];
 $phone = $_POST["phone"];
+$name = $_POST["name"];
 
-$sql = "INSERT INTO `credentials`(`username`, `address`, `phone`) VALUES ('$username','$address','$phone')";
+$sql = "INSERT INTO `credentials`(`name`,`username`, `address`, `phone`) VALUES ('$name','$username','$address','$phone')";
 
 
 if (mysqli_query($conn, $sql)) {
