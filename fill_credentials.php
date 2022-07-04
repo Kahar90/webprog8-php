@@ -34,6 +34,11 @@
             <tbody>
             <form method="POST" name="updateitem" action="additem.php">
                 <tr>
+                    <td><b>Name</b></td>
+                    <td>:</td>
+                    <td><input type="text" name="Name"></td>
+                </tr>    
+                <tr>
                     <td><b>Address</b></td>
                     <td>:</td>
                     <td><textarea cols="20" rows="3" name="address"></textarea></td>
