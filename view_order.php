@@ -79,7 +79,8 @@ if (mysqli_num_rows($result) > 0){ ?>
             
              
             </form>
-            <?php  }?>               
+            <?php  }?>     
+            <a href="fill_credentials.php">submit</a>         
     </div>
                 
     <?php

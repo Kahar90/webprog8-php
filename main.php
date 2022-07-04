@@ -41,6 +41,10 @@ if ($user_level == 1) {
                 <form action="addnewitempage.php">
                     <button type="submit">+ Add item</button>
                 </form>
+
+                <form action="order_list.php">
+                    <button type="submit">View orders</button>
+                </form>
             </div>
             <?php
     if (mysqli_num_rows($result) > 0){ ?>
