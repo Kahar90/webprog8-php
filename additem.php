@@ -22,6 +22,10 @@ if (mysqli_query($conn, $sql)) {
 
 
  mysqli_close($conn);
+<<<<<<< Updated upstream
  echo "<p><a href='main.php'>Click here to go back</a></p>";
+=======
+ 
+>>>>>>> Stashed changes
 
 ?>

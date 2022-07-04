@@ -21,7 +21,36 @@ $result = mysqli_query($conn, $sql);
 <?php
 if ($user_level == 1) {
     // level 1 means it is admin
+<<<<<<< Updated upstream
    
+=======
+    ?>
+    
+    <div class="navbar">
+            <div class="navbarname">
+                <a href="index.php"><span style="color:#1D8348">KAK SU</span><span style="color:#2E86C1">NASI KERABU</span></a>  
+            </div>
+
+            <div class="navbarbutton">
+                <ul>
+                    <li><a href="main.php">Menu</a></li>
+                    <li><a href="about-us-admin.php">About us</a></li>
+                    <li><a href="contact-us-admin.php">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        
+            <div class="addnew">
+                <form action="addnewitempage.php">
+                    <button type="submit">+ Add item</button>
+                </form>
+
+                <form action="order_list.php">
+                    <button type="submit">Orders</button>
+                </form>
+            </div>
+            <?php
+>>>>>>> Stashed changes
     if (mysqli_num_rows($result) > 0){ ?>
 
         <table width="600" border="1" cellspacing="0" cellpadding="3">
