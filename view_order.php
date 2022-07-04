@@ -76,14 +76,15 @@ if (mysqli_num_rows($result) > 0){ ?>
                     <button type="submit" class="material-symbols-outlined">delete</button>
                   </div>
                 </div>
-            
-             
-            </form>
-            <?php  }?>     
-            <form action="fill_credentials.php" >
-                <input type="submit" value="Submit" class="submit-button"/>
+                            
+    </form>
+            <?php  }?>
+            <form action="fill_credentials.php">
+              <button type="submit" class="submit-button">Submit</button>
             </form>   
+
     </div>
+ 
                 
     <?php
     }else { ?>
