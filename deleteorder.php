@@ -20,12 +20,11 @@ header("Location: login.php");
                  
          
 		 if (mysqli_query($conn, $sql)) {
-			echo "<h3>Order deleted successfully</h3>";
+			header("Location: view_order.php");
 			} else {
 				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 				}
         
 		
 	     mysqli_close($conn);
-         echo "<p><a href='view_order.php'>Click here to go back</a></p>";
 

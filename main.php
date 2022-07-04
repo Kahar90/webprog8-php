@@ -21,9 +21,6 @@ $result = mysqli_query($conn, $sql);
 <?php
 if ($user_level == 1) {
     // level 1 means it is admin
-<<<<<<< Updated upstream
-   
-=======
     ?>
     
     <div class="navbar">
@@ -44,49 +41,32 @@ if ($user_level == 1) {
                 <form action="addnewitempage.php">
                     <button type="submit">+ Add item</button>
                 </form>
-
-                <form action="order_list.php">
-                    <button type="submit">Orders</button>
-                </form>
             </div>
             <?php
->>>>>>> Stashed changes
     if (mysqli_num_rows($result) > 0){ ?>
+        
+            <div class="grid-container2">
+            <?php while($rows = mysqli_fetch_assoc($result)) { ?>
+                <form name="routeedititempage" method="POST" action="edititempage.php">
+                    <div class="columns">
+                        <ul class="price">
+                            <li class="header"><input type="hidden" value="<?php echo $rows['itemname']; ?>" name="itemName"><?php echo $rows['itemname']; ?></li>
+                            <li><input type="hidden" value="<?php echo $rows['linkimg']; ?>" name="linkImg"><img src="<?php echo $rows['linkimg']; ?>" alt="" width="300" height="200"></li>
+                            <li class="grey"><input type="hidden" value="<?php echo $rows['itemprice']; ?>" name="itemPrice">RM <?php echo $rows['itemprice']; ?></li>
+                            <li><input type="hidden" value="<?php echo $rows['itemdesc']; ?>" name="itemDesc"><?php echo $rows['itemdesc']; ?></li>
+                            <li class="grey"><input type="submit" value="Edit"><input type="submit" onclick="alert('Item deleted Successfully')" value="Delete" formaction="deleteitem.php" ></li>
+                        </ul>   
+                    </div>
 
-        <table width="600" border="1" cellspacing="0" cellpadding="3">
-        <tr>
-                <td align="center"><strong>Item Name</strong></td>
-                <td align="center"><strong>Item Description</strong></td>
-                <td align="center"><strong>Item Price</strong></td>
-                <td align="center"><strong>Action</strong></td>
-                 
-         <?php while($rows = mysqli_fetch_assoc($result)) { ?>
-                <tr>
-                    <form name="routeedititempage" method="POST" action="edititempage.php">
-                    <td><input type="hidden" value="<?php echo $rows['itemname']; ?>" name="itemName"><?php echo $rows['itemname']; ?></td>
-                    <td><input type="hidden" value="<?php echo $rows['itemdesc']; ?>" name="itemDesc"><?php echo $rows['itemdesc']; ?></td>
-                    <td><input type="hidden" value="<?php echo $rows['itemprice']; ?>" name="itemPrice"><?php echo $rows['itemprice']; ?></td>
-                    
-                    <td><input type="submit" value="Edit"> <br> 
-                    </form>
-                    <form action="deleteitem.php" method="POST">
-                    <input type="hidden" value="<?php echo $rows['itemname']; ?>" name="itemName">
-                    <input type="hidden" value="<?php echo $rows['itemdesc']; ?>" name="itemDesc">
-                    <input type="hidden" value="<?php echo $rows['itemprice']; ?>" name="itemPrice">
-                    <input type="submit" value="Delete"></td>
-                    </form>
-                    
-                   
-                    
-                    <?php  }?>
-                    
-        <?php
-        }
-        ?>
-        <h1>Admin Menu</h1>
-        <a href="index.php">
-        <h1>Logout</h1>
-        <button><a href="addnewitempage.php">Add item</a></button>
+                </form>
+                        <?php  }?>
+            </div> 
+
+    
+
+        <?php } ?>
+
+        
         
         
 
@@ -102,9 +82,9 @@ if ($user_level == 1) {
 
         <div class="navbarbutton">
             <ul>
-                <li><a href="#home">Menu</a></li>
-                <li><a href="#news">About us</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="main.php">Menu</a></li>
+                <li><a href="about-us.php">About us</a></li>
+                <li><a href="contact-us.php">Contact Us</a></li>
                 <li style="column-width:60px"><a href="view_order.php"><span class="material-symbols-outlined">shopping_cart</span></a></li>
             </ul>
         </div>
@@ -122,7 +102,7 @@ if ($user_level == 1) {
                         <li><img src="<?php echo $rows['linkimg'] ?>" alt="" width="300" height="200"></li>
                         <li class="grey">RM <?php echo $rows['itemprice']; ?></li>
                         <li><?php echo $rows['itemdesc']; ?></li>
-                        <li class="grey"><input type="number" id="quantity" name="quantity" min="1" max="5"> <input type="submit" value="Order"></a></li>
+                        <li class="grey"><input type="number" id="quantity" name="quantity" min="1" max="5"> <input type="submit" value="Order" onclick="alert('Added to cart successfully')"></a></li>
                     
                     </ul>   
                 </div>

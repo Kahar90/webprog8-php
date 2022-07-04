@@ -28,12 +28,11 @@ header("Location: login.php");
           
          
 		 if (mysqli_query($conn, $sql)) {
-			echo "<h3>New record created successfully</h3>";
+			header("Location: main.php");
 			} else {
 				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 				}
         
 		
 	     mysqli_close($conn);
-         echo "<p><a href='main.php'>Click here to go back</a></p>";
 
