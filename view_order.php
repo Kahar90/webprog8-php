@@ -80,7 +80,9 @@ if (mysqli_num_rows($result) > 0){ ?>
              
             </form>
             <?php  }?>     
-            <a href="fill_credentials.php">submit</a>         
+            <form action="fill_credentials.php" >
+                <input type="submit" value="Submit" class="submit-button"/>
+            </form>   
     </div>
                 
     <?php
