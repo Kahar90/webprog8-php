@@ -18,6 +18,7 @@ $result = mysqli_query($conn, $sql);
 ?>
 <head>
     <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -77,11 +78,14 @@ if (mysqli_num_rows($result) > 0){ ?>
                   </div>
                 </div>
                             
-    </form>
-            <?php  }?>
-            <form action="fill_credentials.php">
-              <button type="submit" class="submit-button">Submit</button>
-            </form>   
+            </form>
+    <?php  }?>
+
+          <form action="fill_credentials.php">
+            <button type="submit" class="submit-button">SUBMIT</button>
+          </form>  
+          
+             
 
     </div>
  

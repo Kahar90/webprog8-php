@@ -35,7 +35,7 @@ if ($user_level == 1) {
                     <li><a href="contact-us-admin.php">Contact Us</a></li>
                 </ul>
             </div>
-        </div>
+    </div>
         
             <div class="addnew">
                 <form action="addnewitempage.php">
@@ -69,9 +69,6 @@ if ($user_level == 1) {
     
 
         <?php } ?>
-
-        
-        
         
 
 <?php
@@ -115,6 +112,3 @@ if ($user_level == 1) {
         </div>  
        <?php } ?>
 <?php } ?>
-
-
-
