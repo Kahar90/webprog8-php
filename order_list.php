@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/order-list.css">
 </head>
 <body>
     <div class="navbar">
@@ -23,25 +23,32 @@
         </div>
     </div>
 
-    <div class="shopping-cart">
-        <!-- Title -->
-        <div class="title">
-            LIST OF ORDERED ITEM
-        </div>   
-    
-        <form method="POST" name="deleteorder" action="deleteorder.php">
-                
-            <!-- Product #1 -->
-            <div class="item">
-                <tr>
-                    <td>Rafi</td>
-                    <td>surabaya</td>
-                    <td>081223938</td>
-                    <td>nasi goreng</td>
-                    <td>20</td>
-                </tr>
+    <div class="container">
+        <div class="table">
+            <div class="table-header">
+                <div class="header__item"><a id="name" class="filter__link" href="#">Name</a></div>
+                <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Address</a></div>
+                <div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">Phone Number</a></div>
+                <div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Item Name</a></div>
+                <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">Item Quantity</a></div>
             </div>
-        </form>
+            <div class="table-content">	
+                <div class="table-row">		
+                    <div class="table-data">Tom</div>
+                    <div class="table-data">Jl.Kuning</div>
+                    <div class="table-data">078782333</div>
+                    <div class="table-data">Suckerman</div>
+                    <div class="table-data">5</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-data">Dick</div>
+                    <div class="table-data">Jl.Jalan</div>
+                    <div class="table-data">011222333</div>
+                    <div class="table-data">Daisy</div>
+                    <div class="table-data">3</div>
+                </div>
+            </div>	
+        </div>
     </div>
 </body>
 </html>
