@@ -1,3 +1,19 @@
+<?php
+session_start(); // Start up your PHP Session
+ 
+require('config.php');//read up on php includes https://www.w3schools.com/php/php_includes.asp
+
+$sql = "SELECT credentials.name, credentials.address,credentials.phone,usercart.itemname, usercart.itemqtty\n"
+
+    . "FROM credentials\n"
+
+    . "JOIN usercart ON credentials.username=usercart.user;";
+    
+    $result = mysqli_query($conn, $sql);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,23 +48,26 @@
                 <div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Item Name</a></div>
                 <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">Item Quantity</a></div>
             </div>
+
             <div class="table-content">	
-                <div class="table-row">		
-                    <div class="table-data">Tom</div>
-                    <div class="table-data">Jl.Kuning</div>
-                    <div class="table-data">078782333</div>
-                    <div class="table-data">Suckerman</div>
-                    <div class="table-data">5</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-data">Dick</div>
-                    <div class="table-data">Jl.Jalan</div>
-                    <div class="table-data">011222333</div>
-                    <div class="table-data">Daisy</div>
-                    <div class="table-data">3</div>
-                </div>
+                
+                <?php while($rows = mysqli_fetch_assoc($result)) { ?>
+                    <div class="table-row">		
+                        <div class="table-data"><?php echo $rows['name']; ?></div>
+                        <div class="table-data"><?php echo $rows['address']; ?></div>
+                        <div class="table-data"><?php echo $rows['phone']; ?></div>
+                        <div class="table-data"><?php echo $rows['itemname']; ?></div>
+                        <div class="table-data"><?php echo $rows['itemqtty']; ?></div>
+                    </div>
+
+                <?php } ?>
+                
             </div>	
         </div>
     </div>
 </body>
 </html>
+
+
+
+
