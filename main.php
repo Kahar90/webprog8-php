@@ -57,7 +57,7 @@ if ($user_level == 1) {
                             <li class="header"><input type="hidden" value="<?php echo $rows['itemname']; ?>" name="itemName"><?php echo $rows['itemname']; ?></li>
                             <li><input type="hidden" value="<?php echo $rows['linkimg']; ?>" name="linkImg"><img src="<?php echo $rows['linkimg']; ?>" alt="" width="300" height="200"></li>
                             <li class="grey"><input type="hidden" value="<?php echo $rows['itemprice']; ?>" name="itemPrice">RM <?php echo $rows['itemprice']; ?></li>
-                            <li><input type="hidden" value="<?php echo $rows['itemdesc']; ?>" name="itemDesc"><?php echo $rows['itemdesc']; ?></li>
+                            <li><input type="hidden" value="<?php echo $rows['itemdesc']; ?>" name="itemDescription"><?php echo $rows['itemdesc']; ?></li>
                             <li class="grey"><input type="submit" value="Edit"><input type="submit" onclick="alert('Item deleted Successfully')" value="Delete" formaction="deleteitem.php" ></li>
                         </ul>   
                     </div>

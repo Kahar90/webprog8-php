@@ -7,7 +7,7 @@ require('config.php');//read up on php includes https://www.w3schools.com/php/ph
 $user_level =$_SESSION["LEVEL"];
 $itemName = $_POST["itemName"];
 $itemPrice = $_POST["itemPrice"];
-$itemDescription = $_POST["itemDesc"];
+$itemDescription = $_POST["itemDescription"];
 $linkimg = $_POST["linkImg"];
 
 ?>
@@ -58,7 +58,7 @@ $linkimg = $_POST["linkImg"];
                 <tr>
                     <td><b>Item Description</b></td>
                     <td>:</td>
-                    <td><textarea cols="20" rows="3" name="itemDescription" value="<?php echo $itemDescription?>"></textarea></td>
+                    <td><textarea cols="20" rows="3" name="itemDescription"><?php echo $itemDescription?></textarea></td>
                 </tr>
                 <tr>
                     <td><b>Image Link</b></td>
