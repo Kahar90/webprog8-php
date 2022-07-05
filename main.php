@@ -39,11 +39,11 @@ if ($user_level == 1) {
         
             <div class="addnew">
                 <form action="addnewitempage.php">
-                    <button type="submit">+ Add item</button>
+                    <button type="submit" style="width: 18%">+ Add item</button>
                 </form>
 
                 <form action="order_list.php">
-                    <button type="submit">View orders</button>
+                    <button type="submit" style="width: 18%">View orders</button>
                 </form>
             </div>
             <?php
