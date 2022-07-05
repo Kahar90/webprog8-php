@@ -33,25 +33,13 @@
                 
             <!-- Product #1 -->
             <div class="item">
-                <div class="description">
-                    <input type="text" name="custName" value="Rhavy">
-                </div>
-
-                <div class="description">
-                    <input type="text" name="custAddress" value="Rhavy">
-                </div>
-
-                <div class="description">
-                    <input type="number" name="phone" value="01139333882">
-                </div>
-
-                <div class="description">
-                    <input type="text" name="itemName" value="sotong">
-                </div>
-                    
-                <div class="quantity">
-                    <input type="number" name="quantity" value="4">
-                </div>
+                <tr>
+                    <td>Rafi</td>
+                    <td>surabaya</td>
+                    <td>081223938</td>
+                    <td>nasi goreng</td>
+                    <td>20</td>
+                </tr>
             </div>
         </form>
     </div>
