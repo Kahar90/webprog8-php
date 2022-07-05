@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 04, 2022 at 07:03 PM
+-- Generation Time: Jul 05, 2022 at 11:20 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -39,7 +39,7 @@ CREATE TABLE `credentials` (
 --
 
 INSERT INTO `credentials` (`name`, `username`, `address`, `phone`) VALUES
-('', 'customer', 'belanak', '+62811160101');
+('Bintang ', 'customer', 'Greenfield Regency Block A', '0216432548');
 
 -- --------------------------------------------------------
 
@@ -59,11 +59,10 @@ CREATE TABLE `item` (
 --
 
 INSERT INTO `item` (`itemname`, `itemdesc`, `itemprice`, `linkimg`) VALUES
-('Nasi Kerabu Ayam Panggang', 'Kerabu rice is served with grilled chicken', 24, 'https://makan.ninja/wp-content/uploads/2021/07/Nasi-Kerabu-Ayam-Bakar-e1626347704511.jpeg'),
 ('Nasi Kerabu Ayam Kampung Goreng', 'Kerabu rice is served with fried chicken', 24, 'https://cdn.shopify.com/s/files/1/0462/8162/1665/products/Lina-Products4a_700x700.jpg?v=1634090191'),
-('Nasi Kerabu Ayam Kambing Panggang', 'Kerabu rice is served with roasted goat', 28, 'https://images.deliveryhero.io/image/fd-my/LH/le9p-hero.jpg'),
+('Nasi Kerabu Kambing Panggang', 'Kerabu rice is served with roasted goat', 28, 'https://images.deliveryhero.io/image/fd-my/LH/le9p-hero.jpg'),
 ('Keropok Lekor', 'Traditional Malay fish cracker snack originating from the state of Terengganu', 5, 'https://happydapur.com/wp-content/uploads/2021/11/i-bRDtprj-X5-500x500.jpg'),
-('Teh Ais', 'Tea served with milk and ice', 3, 'https://alhudaservices.com/wp-content/uploads/2021/01/teh-ais.jpg');
+('Teh Ais', 'iced tea w milk', 3, 'https://alhudaservices.com/wp-content/uploads/2021/01/teh-ais.jpg');
 
 -- --------------------------------------------------------
 
@@ -105,13 +104,9 @@ CREATE TABLE `usercart` (
 --
 
 INSERT INTO `usercart` (`user`, `itemname`, `itemqtty`) VALUES
-('user_1', 'Nasi Kerabu', 1),
-('admin', '', 0),
-('admin', '', 0),
-('admin', '', 0),
 ('customer', 'Keropok Lekor', 2),
-('customer', 'Nasi Kerabu Ayam Kampung Goreng', 2),
-('customer', 'Teh Ais', 2);
+('customer', 'Nasi Kerabu Kambing Panggang', 3),
+('customer', 'Teh Ais', 3);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
