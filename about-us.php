@@ -31,7 +31,7 @@
     <div class="we-are-block">
         <div id="about-us-section">
             <div class="about-us-image">
-                    <img src="img/about-us (1).png" width="808" height="458" alt="Lobby Image">
+                    <img src="img/about-us (1).png" width="808" height="458" alt="Image">
             </div>
             <div class="about-us-info">
                 <h2>The first Nasi Kerabu online store in Malaysia</h2>
@@ -40,7 +40,7 @@
         </div>
         <div id="history-section">
             <div class="history-image">
-                <img src="img/about-us (2).png" width="951" height="471" alt="Building Pic">
+                <img src="img/about-us (2).png" width="951" height="471" alt="Image">
             </div>
             <div class="history-info">
                 <h2>Serving more than ten cities in Malaysia</h2>
